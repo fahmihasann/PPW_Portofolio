@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>CSS Text</title>
+    <style>
+        .teks-normal {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .uji-indent {
+            text-indent: 50px;
+        }
+        .uji-letter {
+            letter-spacing: 5px;
+        }
+        .uji-word {
+            word-spacing: 15px;
+        }
+        .uji-line {
+            line-height: 2.5;
+        }
+        .uji-white-space {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="teks-normal uji-indent">
+        Paragraf ini menggunakan text-indent. Baris pertama dari paragraf ini akan menjorok ke dalam sejauh 50 piksel, sedangkan baris berikutnya akan tetap berada di posisi normal.
+    </div>
+
+    <div class="teks-normal uji-letter">
+        Paragraf ini menggunakan letter-spacing. Jarak antarhuruf diperlebar sejauh 5 piksel.
+    </div>
+
+    <div class="teks-normal uji-word">
+        Paragraf ini menggunakan word-spacing. Jarak antarkata diperlebar sejauh 15 piksel.
+    </div>
+
+    <div class="teks-normal uji-line">
+        Paragraf ini menggunakan line-height. Jarak vertikal antarbaris dalam paragraf ini diatur menjadi 2.5 kali lebih besar dari ukuran teks normal, sehingga terlihat lebih renggang.
+    </div>
+
+    <div class="teks-normal uji-white-space" style="width: 300px;">
+        Paragraf ini menggunakan white-space: nowrap. Teks tidak akan turun ke baris baru meskipun melewati batas lebar kontainer.
+    </div>
+</body>
+</html>

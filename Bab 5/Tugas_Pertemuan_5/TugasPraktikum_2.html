@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+    <title>Form Pendaftaran Lomba 17 Agustus</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #d32f2f; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #fff;
+            background-color: #d32f2f;
+            padding: 5px 15px;
+            border-radius: 3px;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-bottom: 10px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: inline;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; 
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336; 
+        }
+
+        input[type="reset"]:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/720x0/webp/photo/2023/08/02/4097590410.jpg" alt="Banner 17 Agustus">
+            <h2>Form Pendaftaran Lomba 17 Agustus</h2>
+            <img src="https://radiostar.harianjogja.com/assets/2023/08/lomba-17-an-800x400.jpg" alt="Header Form">
+        </header>
+
+        <section>
+            <form action="/proses_pendaftaran.php" method="POST">
+
+                <fieldset>
+                    <legend>Data Diri Peserta</legend>
+                    
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                    
+                    <label for="usia">Usia:</label>
+                    <input type="number" id="usia" name="usia" placeholder="Contoh: 15" required>
+
+                    <label>Jenis Kelamin:</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="pria" name="gender" value="Pria" required>
+                        <label for="pria">Laki-laki</label><br>
+                        <input type="radio" id="wanita" name="gender" value="Wanita">
+                        <label for="wanita">Perempuan</label>
+                    </div>
+
+                    <label for="kategori">RT:</label>
+                    <select id="kategori" name="kategori">
+                        <option value="rt01">RT 01</option>
+                        <option value="rt02">RT 02</option>
+                        <option value="rt03">RT 03</option>
+                        <option value="rt04">RT 04</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Pemilihan Cabang Lomba</legend>
+                    
+                    <label>Pilih Lomba yang ingin diikuti (Boleh lebih dari 1):</label><br>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lomba1" name="lomba1" value="Makan Kerupuk">
+                        <label for="lomba1">Makan Kerupuk</label><br>
+                        
+                        <input type="checkbox" id="lomba2" name="lomba2" value="Balap Karung">
+                        <label for="lomba2">Balap Karung</label><br>
+                        
+                        <input type="checkbox" id="lomba3" name="lomba3" value="Panjat Pinang">
+                        <label for="lomba3">Panjat Pinang</label><br>
+                        
+                        <input type="checkbox" id="lomba4" name="lomba4" value="Tarik Tambang">
+                        <label for="lomba4">Tarik Tambang</label>
+                    </div>
+
+                    <label for="pesan">Pesan dan Kesan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan dan kesan Anda di sini."></textarea>
+                </fieldset>
+
+                <div class="button-group">
+                    <input type="submit" value="Kirim Pendaftaran">
+                    <input type="reset" value="Kosongkan Form">
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
