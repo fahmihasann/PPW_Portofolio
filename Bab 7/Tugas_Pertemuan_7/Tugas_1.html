@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas 1 </title>
+<style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 150vh; 
+    background-color: #4b2b2e; 
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100; 
+  }
+
+  .container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-card {
+    position: relative;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+
+  .status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e0f8e9;
+    color: #2e7d32;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 20;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    margin-bottom: 15px;
+  }
+
+  .role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    background-color: #383c44;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 50; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+  }
+
+  .back-to-top:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="navbar">Sticky Navbar</div>
+
+<div class="container">
+  <div class="profile-card">
+    <div class="status-badge">Online 🟢</div>
+    
+    <img src="https://via.placeholder.com/100" alt="Profile" class="profile-pic">
+    
+    <h2 class="role">name</h2>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">Back to Top ⬆</a>
+
+</body>
+</html>
