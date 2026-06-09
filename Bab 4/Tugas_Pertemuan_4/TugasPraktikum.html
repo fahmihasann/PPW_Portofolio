@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran Lomba 17 Agustus</title>
+</head>
+<body>
+
+    <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/720x0/webp/photo/2023/08/02/4097590410.jpg" alt="Banner 17 Agustus" width="600">
+    
+    <h2>Form Pendaftaran Lomba 17 Agustus</h2>
+
+    <form action="/proses_pendaftaran.php" method="POST">
+
+        <img src="https://radiostar.harianjogja.com/assets/2023/08/lomba-17-an-800x400.jpg" alt="Header Form" width="600">
+        <br><br>
+
+        <fieldset>
+            <legend>Data Diri Peserta</legend>
+            
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" size="50" placeholder="Masukkan nama lengkap Anda" required><br><br>
+            
+            <label for="usia">Usia:</label><br>
+            <input type="number" id="usia" name="usia" placeholder="Contoh: 15" required><br><br>
+
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="gender" value="Pria">
+            <label for="pria">Laki-laki</label><br>
+            <input type="radio" id="wanita" name="gender" value="Wanita">
+            <label for="wanita">Perempuan</label><br><br>
+
+            <label for="kategori">RT:</label><br>
+            <select id="kategori" name="kategori">
+                <option value="rt01">RT 01</option>
+                <option value="rt02">RT 02</option>
+                <option value="rt03">RT 03</option>
+                <option value="rt04">RT 04</option>
+            </select><br><br>
+        </fieldset>
+        
+        <br>
+
+        <fieldset>
+            <legend>Pemilihan Cabang Lomba</legend>
+            
+            <label>Pilih Lomba yang ingin diikuti (Boleh lebih dari 1):</label><br>
+            <input type="checkbox" id="lomba1" name="lomba1" value="Makan Kerupuk">
+            <label for="lomba1">Makan Kerupuk</label><br>
+            
+            <input type="checkbox" id="lomba2" name="lomba2" value="Balap Karung">
+            <label for="lomba2">Balap Karung </label><br>
+            
+            <input type="checkbox" id="lomba3" name="lomba3" value="Panjat Pinang">
+            <label for="lomba3">Panjat Pinang</label><br>
+            
+            <input type="checkbox" id="lomba4" name="lomba4" value="Tarik Tambang">
+            <label for="lomba4">Tarik Tambang</label><br><br>
+
+            <label for="pesan">Pesan dan Kesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="60" placeholder="Tuliskan pesan dan kesan."></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Kirim Pendaftaran">
+        <input type="reset" value="Kosongkan Form">
+    </form>
+</body>
+</html>
